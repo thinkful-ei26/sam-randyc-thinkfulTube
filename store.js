@@ -34,6 +34,7 @@ const decorateResponse = function(response) {
       id: banana.id.videoId,
       title: banana.snippet.title,
       thumbnail: banana.snippet.thumbnails.default.url,
+      altText: banana.snippet.description,
     };
   });
  

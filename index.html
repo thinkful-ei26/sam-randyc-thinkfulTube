@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <html lang="en">
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
@@ -10,18 +11,20 @@
     
     
 </head>
-<body>
-    <h1>Search youTube Videos</h1>
-    <form class="js_search_form" action = "#">
-        <label for="query"></label>
-        <input type="text" class="js_query" placeholder="enter search item">
-        <button type="submit">Search</button>
-        <ul class='results'>
-
-        </ul>
-    </form>
+<body >
+    <main role='main'>
+        <h1>Search youTube Videos</h1>
+        <form  class="js_search_form" action = "#">
+            <label for="query"></label>
+            <input aria-label="search youtube videos" type="text" class="js_query" placeholder="enter search item">
+            <button type="submit">Search</button>
+            <ul class='results'>
+            </ul>
+        </form>
+    </main>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="index.js"></script>
     <script src="store.js"></script>
+    
 </body>
 </html>

@@ -137,7 +137,9 @@ const render = function() {
 const generateVideoItemHtml = function(video) {
   return `
   <li data-video-id="${video.id}">
-  <img src ="${video.thumbnail}" />
+  <a href="https://www.youtube.com/watch?v=${video.id}">
+  <img src ="${video.thumbnail}" alt= "${video.description}" href="google.com"/>
+  </a>
   <h3>${video.title}</h3>
   </li>
   `;
