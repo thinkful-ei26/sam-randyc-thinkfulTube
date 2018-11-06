@@ -1,6 +1,6 @@
 'use strict';
-'use strict';
-const API_KEY = 'YOUR_KEY_HERE';
+
+
 
 /*
   We want our store to hold an array of "decorated" video objects - i.e. objects that
@@ -20,13 +20,13 @@ const store = {
     {
       
     }
-
   ]
 };
 
 // TASK: Add the Youtube Search API Base URL here:
 // Documentation is here: https://developers.google.com/youtube/v3/docs/search/list#usage
-const BASE_URL = '';
+const BASE_URL = 'https://www.googleapis.com/youtube/v3/search';
+const API_KEY = 'AIzaSyAIf_3PceEbdUYn0ttqaPgw4F4akom9uDo';
 
 /**
  * @function fetchVideos
@@ -45,14 +45,20 @@ const BASE_URL = '';
 const fetchVideos = function(searchTerm, callback) {
   const query ={
     q: searchTerm,
-    key: AIzaSyAIf_3PceEbdUYn0ttqaPgw4F4akom9uDo,
-    part: 'snippit',
+    key: API_KEY,
+    part: 'snippet',
   };
 
-  $.getJSON(base_URL, query, callback);
+  $.getJSON(BASE_URL, query, callback);
 };
 
-fetchVideos('cats' );
+
+
+// fetchVideos('cats', (response) => {
+//   console.log(response);
+// });
+
+
 /**
  * @function decorateResponse
  * Uses Youtube API response to create an array of "decorated" video objects as 
@@ -69,14 +75,14 @@ fetchVideos('cats' );
 // TEST IT! Grab an example API response and send it into the function - make sure
 // you get back the object you want.
 const decorateResponse = function(response) {
-  return response.items.map(item => {
+  return response.items.map(banana => {
     return {
-      id: item.id.videoID,
-      title: item.snippet.title,
-      thumbnail: item.thumbnails.default.url,
+      id: banana.id.videoId,
+      title: banana.snippet.title,
+      thumbnail: banana.snippet.thumbnails.default.url,
     };
   });
-
+ 
 };
 
 /**
@@ -153,6 +159,7 @@ const handleFormSubmit = function() {
 // When DOM is ready:
 $(function () {
   handleFormSubmit();
+  
   // TASK:
   // 1. Run `handleFormSubmit` to bind the event listener to the DOM
 });
