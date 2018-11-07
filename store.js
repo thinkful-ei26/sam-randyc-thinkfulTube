@@ -12,7 +12,7 @@ const store = {
 // TASK: Add the Youtube Search API Base URL here:
 // Documentation is here: https://developers.google.com/youtube/v3/docs/search/list#usage
 const BASE_URL = 'https://www.googleapis.com/youtube/v3/search';
-const API_KEY = 'AIzaSyAIf_3PceEbdUYn0ttqaPgw4F4akom9uDo';
+const API_KEY = "Hey Sam I removed the key for security reasons";
 
 
 //GET VIDEOS
@@ -33,7 +33,7 @@ const decorateResponse = function(response) {
     return {
       id: banana.id.videoId,
       title: banana.snippet.title,
-      thumbnail: banana.snippet.thumbnails.default.url,
+      thumbnail: banana.snippet.thumbnails.medium.url,
       altText: banana.snippet.description,
     };
   });

@@ -1,5 +1,6 @@
 body {
     background-color: antiquewhite;
+    font-family: Arial;
 }
 h1, form {
     padding-top: 40px; 
@@ -7,5 +8,19 @@ h1, form {
 
 }
 li {
-    list-style: none
+    list-style: none;
+    padding-top: 20px; 
+}
+
+img {
+ 
+  border: 2px;
+  border-color: red;
+
+}
+
+h3 {
+
+  size: 7 px;
+
 }
